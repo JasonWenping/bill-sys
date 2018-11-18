@@ -20,10 +20,10 @@
 <script>
 import LeftBar from './LandingPage/LeftBar'
 export default {
-    name: 'search',
-    components: {
-        'left-bar': LeftBar
-    }
+  name: 'search',
+  components: {
+    'left-bar': LeftBar
+  }
 }
 </script>
 

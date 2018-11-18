@@ -19,18 +19,18 @@
 
 <script>
 export default {
-    name: 'left-bar',
-    data: function () {
-        return {
-            list: ['/home','/search','/config','/setting'],
-            active: [true, false, false, false]
-        }
-    },
-    methods: {
-        isActive: function (index) {
-            this.active = [index == 0, index == 1, index == 2, index == 3]
-        }
+  name: 'left-bar',
+  data: function () {
+    return {
+      list: ['/home', '/search', '/config', '/setting'],
+      active: [true, false, false, false]
     }
+  },
+  methods: {
+    isActive: function (index) {
+      this.active = [index == 0, index == 1, index == 2, index == 3]
+    }
+  }
 }
 </script>
 

@@ -1,12 +1,13 @@
 <template>
     <div id="Setting">
         <h5>系统设置</h5>
+        <router-link to="/logout"><p>logout</p></router-link>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'setting'
+  name: 'setting'
 }
 </script>
 

@@ -66,8 +66,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="id">-</label>
-                            <input type="button" value="保存">
+                            <button class="btn btn-submit">保 存</button>
                         </div>
                         
                     </form>
@@ -197,44 +196,44 @@
 
 <script>
 import LeftBar from './LandingPage/LeftBar'
-import { fail } from 'assert';
+import { fail } from 'assert'
 export default {
-    name: 'para-conf',
-    data: function () {
-        return {
-            isTrue: {
-                isAlipay: true,
-                isUnionpay: false,
-                isICBC: false
-            }
-        }
-    },
-    methods: {
-       selectAlipay: function () {
-           this.isTrue = {
-               isAlipay: true,
-               isUnionpay: false,
-               isICBC: false
-           }
-       },
-       slelectUnionpay: function () {
-           this.isTrue = {
-               isAlipay: false,
-               isUnionpay: true,
-               isICBC: false
-           }
-       },       
-       slelectICBC: function () {
-           this.isTrue = {
-               isAlipay: false,
-               isUnionpay: false,
-               isICBC: true
-           }
-       }  
-    },
-    components: {
-        'left-bar': LeftBar
+  name: 'para-conf',
+  data: function () {
+    return {
+      isTrue: {
+        isAlipay: true,
+        isUnionpay: false,
+        isICBC: false
+      }
     }
+  },
+  methods: {
+    selectAlipay: function () {
+      this.isTrue = {
+        isAlipay: true,
+        isUnionpay: false,
+        isICBC: false
+      }
+    },
+    slelectUnionpay: function () {
+      this.isTrue = {
+        isAlipay: false,
+        isUnionpay: true,
+        isICBC: false
+      }
+    },
+    slelectICBC: function () {
+      this.isTrue = {
+        isAlipay: false,
+        isUnionpay: false,
+        isICBC: true
+      }
+    }
+  },
+  components: {
+    'left-bar': LeftBar
+  }
 }
 </script>
 
@@ -299,6 +298,19 @@ export default {
 }
 .hide {
     display: none;
+}
+.content .form-group button{
+    width: 200px;
+    height: 40px;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    background-color: rgb(30, 129, 243);
+    margin: 20px auto;
+}
+.content .form-group button:hover{
+    background-color: rgb(4, 54, 112);
 }
 </style>
 

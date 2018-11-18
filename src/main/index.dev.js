@@ -1,4 +1,4 @@
-import { fail } from 'assert';
+import { fail } from 'assert'
 
 /**
  * This file is used specifically and only for development. It installs
