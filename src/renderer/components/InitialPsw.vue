@@ -4,8 +4,8 @@
         <h1>Set Your Password !</h1>
         <input type="password" placeholder="请设置密码！" v-model="psw"><span v-if="verify">请输入密码</span><br>
         <input type="password" placeholder="请确认密码！" v-model="rpsw"><br>
-        <!-- <router-link to="/home"><button @click="submitPsw">setting</button></router-link> -->
-        <button @click="submitPsw">setting</button>
+        <router-link to="/home"><button @click="submitPsw">setting</button></router-link>
+        <!-- <button @click="submitPsw">setting</button> -->
     </div>
 </div>
 </template>
@@ -23,7 +23,11 @@ import { fail } from 'assert';
    },
    methods: {
        submitPsw: function () {
-           if (this.psw == '' || this.rpsw == '') this.verify = true
+           if (this.psw == '' || this.rpsw == '') {
+               this.verify = true
+           } else {
+                this.verify = false
+            }
            if (this.psw !== this.rpsw) {
                alert('Password set correct...')
                return false;
