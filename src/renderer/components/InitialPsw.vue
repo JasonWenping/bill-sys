@@ -11,30 +11,26 @@
 </template>
 
 <script>
-import { fail } from 'assert';
- export default {
-   name: 'initial-page',
-   data: function () {
-       return {
-           psw: '',
-           rpsw: '',
-           verify: false
-       }
-   },
-   methods: {
-       submitPsw: function () {
-           if (this.psw == '' || this.rpsw == '') {
-               this.verify = true
-           } else {
-                this.verify = false
-            }
-           if (this.psw !== this.rpsw) {
-               alert('Password set correct...')
-               return false;
-           }
-       }
-   }
- }
+import { fail } from 'assert'
+export default {
+  name: 'initial-page',
+  data: function () {
+    return {
+      psw: '',
+      rpsw: '',
+      verify: false
+    }
+  },
+  methods: {
+    submitPsw: function () {
+      if (this.psw == '' || this.rpsw == '') this.verify = true
+      if (this.psw !== this.rpsw) {
+        alert('Password set correct...')
+        return false
+      }
+    }
+  }
+}
 </script>
 
 

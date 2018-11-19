@@ -11,19 +11,19 @@
 
 <script>
 import LeftBar from './LandingPage/LeftBar'
- export default {
-   name: 'login-page',
-   components: {
-       'left-bar': LeftBar
-   },
-   //注册一个focus组件，便于元素自动获取focus，用法 v-focus
-   directives: {
-       focus: {inserted: function (el) { el.focus()}}
-   },
-   mounted: function () {
+export default {
+  name: 'login-page',
+  components: {
+    'left-bar': LeftBar
+  },
+  // 注册一个focus组件，便于元素自动获取focus，用法 v-focus
+  directives: {
+    focus: {inserted: function (el) { el.focus() }}
+  },
+  mounted: function () {
 
-   }
- }
+  }
+}
 </script>
 
 <style scoped>

@@ -21,12 +21,12 @@ function createWindow () {
   /**
    * Initial window options
    */
-  Menu.setApplicationMenu(null);
+  Menu.setApplicationMenu(null)
   mainWindow = new BrowserWindow({
     height: 563,
     useContentSize: true,
     width: 1000
-    //autoHideMenuBar: true
+    // autoHideMenuBar: true
   })
 
   mainWindow.loadURL(winURL)
