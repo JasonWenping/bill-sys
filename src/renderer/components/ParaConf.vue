@@ -13,7 +13,7 @@
             <div class="content">
                 <div class="alipay-form">
                     <form id="alipayForm" class="form-list" :class="{'hide': !isTrue.isAlipay}">
-                        <h3>公共请求参数</h3>
+                        <h3>公共参数</h3>
                         <div class="form-group">
                             <label for="id">ID</label>
                             <input type="text" placeholder="平台中应用ID" id="id">
@@ -54,6 +54,7 @@
                             <label for="id">接口版本</label>
                             <input type="text" value="1.0" disabled>
                         </div>
+                        <h3>业务参数</h3>
                         <div class="form-group">
                             <label for="id">token</label>
                             <input type="text" placeholder="鉴权token">
@@ -71,24 +72,23 @@
                         
                     </form>
                     <form id="unionpayForm" class="form-list" :class="{'hide': !isTrue.isUnionpay}">
-                        <h3>银联请求参数</h3>
+                        <h3>公共参数</h3>
                         <div class="form-group">
                             <label for="id">ID</label>
-                            <input type="text" placeholder="平台中应用ID" id="id">
+                            <input type="text" placeholder="应用ID" id="id">
                         </div>
                         <div class="form-group">
-                            <label for="key">私钥</label>
+                            <label for="key">应用秘钥</label>
                             <input type="text" placeholder="应用配置的公私钥对（私钥）" id="key">
                         </div>
                         <div class="form-group">
-                            <label for="port">接口名称</label>
-                            <input type="text" placeholder="接口名称" id="prot">
+                            <label for="port">签名</label>
+                            <input type="text" placeholder="SHA-256算法【signature（秘钥）+body（参数）+ts（时间戳）】签名" id="prot">
                         </div>
+                        <h3>业务参数</h3>
                         <div class="form-group">
-                            <label for="formate">格式</label>
-                            <select name="formate" id="formate">
-                                <option value="JSON">JSON</option>
-                            </select>
+                            <label for="version">版本号</label>
+                            <input type="text" placeholder="版本号">
                         </div>
                         <div class="form-group">
                             <label for="encoding">编码</label>
@@ -97,51 +97,70 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="rsa">签名算法</label>
-                            <input type="text" placeholder="目前支持RSA2和RSA，推荐使用RSA2" id="rsa">
+                            <label for="rsa">产品类型</label>
+                            <input type="text" placeholder="" id="rsa">
                         </div>
                         <div class="form-group">
                             <label for="id">签名串</label>
                             <input type="text" placeholder="商户请求参数的签名串">
                         </div>
                         <div class="form-group">
-                            <label for="id">时间</label>
+                            <label for="id">订单发送时间</label>
                             <input type="date" placeholder="发送请求的时间">
                         </div>
                         <div class="form-group">
-                            <label for="id">接口版本</label>
-                            <input type="text" value="1.0" disabled>
+                            <label for="id">交易类型</label>
+                            <input type="text">
                         </div>
                         <div class="form-group">
-                            <label for="id">token</label>
-                            <input type="text" placeholder="鉴权token">
+                            <label for="id">交易子类</label>
+                            <input type="text" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="category">账单类型</label>
-                            <select name="category" id="category">
-                                <option value="trade">trade</option>
-                                <option value="signcustomer">signcustomer</option>
-                            </select>
+                            <label for="id">签名</label>
+                            <input type="text" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="id">-</label>
-                            <input type="button" value="保存">
+                            <label for="id">签名方法</label>
+                            <input type="text" placeholder="">
                         </div>
-                        
+                        <div class="form-group">
+                            <label for="id">清算日期</label>
+                            <input type="date" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="id">商户代码</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="id">文件类型</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="id">证书ID</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="id">其他</label>
+                            <input type="text" placeholder="请求方保留域">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-submit">保 存</button>
+                        </div>
                     </form>
                     <form id="ICBCForm" class="form-list" :class="{'hide': !isTrue.isICBC}">
-                        <h3>工商银行请求参数</h3>
+                        <h3>公共请求参数</h3>
                         <div class="form-group">
                             <label for="id">ID</label>
-                            <input type="text" placeholder="平台中应用ID" id="id">
+                            <input type="text" placeholder="在工行开放平台中的应用id" id="id">
                         </div>
                         <div class="form-group">
                             <label for="key">私钥</label>
                             <input type="text" placeholder="应用配置的公私钥对（私钥）" id="key">
                         </div>
                         <div class="form-group">
-                            <label for="port">接口名称</label>
-                            <input type="text" placeholder="接口名称" id="prot">
+                            <label for="port">消息编号</label>
+                            <input type="text" placeholder="消息通讯唯一编号" id="prot">
                         </div>
                         <div class="form-group">
                             <label for="formate">格式</label>
@@ -157,34 +176,49 @@
                         </div>
                         <div class="form-group">
                             <label for="rsa">签名算法</label>
-                            <input type="text" placeholder="目前支持RSA2和RSA，推荐使用RSA2" id="rsa">
+                            <input type="text" placeholder="目前支持AES" id="rsa">
                         </div>
                         <div class="form-group">
-                            <label for="id">签名串</label>
-                            <input type="text" placeholder="商户请求参数的签名串">
+                            <label for="encoding">签名类型</label>
+                            <select name="encoding" id="encoding">
+                                <option value="utf-8">UTF-8</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="id">签名</label>
+                            <input type="text" placeholder="报文签名">
                         </div>
                         <div class="form-group">
                             <label for="id">时间</label>
                             <input type="date" placeholder="发送请求的时间">
                         </div>
+                        <h3>业务参数</h3>
                         <div class="form-group">
-                            <label for="id">接口版本</label>
-                            <input type="text" value="1.0" disabled>
+                            <label for="id">交易代码</label>
+                            <input type="text" value="1.0">
                         </div>
                         <div class="form-group">
-                            <label for="id">token</label>
-                            <input type="text" placeholder="鉴权token">
+                            <label for="id">集团CIS号</label>
+                            <input type="text" placeholder="客户注册时的归属编码">
                         </div>
                         <div class="form-group">
-                            <label for="category">账单类型</label>
-                            <select name="category" id="category">
-                                <option value="trade">trade</option>
-                                <option value="signcustomer">signcustomer</option>
-                            </select>
+                            <label for="id">证书ID</label>
+                            <input type="text" placeholder="无证书客户可上送空">
                         </div>
                         <div class="form-group">
-                            <label for="id">-</label>
-                            <input type="button" value="保存">
+                            <label for="id">开始时间</label>
+                            <input type="date" placeholder="yyyyMMdd">
+                        </div>
+                        <div class="form-group">
+                            <label for="id">结束时间</label>
+                            <input type="date" placeholder="yyyyMMdd">
+                        </div>
+                        <div class="form-group">
+                            <label for="id">发生额下限</label>
+                            <input type="number" placeholder="若输入则为正数">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-submit">提交</button>
                         </div>
                         
                     </form>
@@ -279,6 +313,16 @@ export default {
 .content {
     margin-top: 10px;
 }
+.content h3 {
+    margin: 20px 10px;
+    background-color: rgb(245, 245, 245);
+    padding: 5px;
+}
+.content h3:before {
+    content: '\25C6';
+    color: rgb(0, 124, 169);
+    margin-right: 10px;
+}
 .content .form-group {
     height: 42px;
     line-height: 42px;
@@ -306,11 +350,11 @@ export default {
     border-radius: 5px;
     border: none;
     color: #ffffff;
-    background-color: rgb(30, 129, 243);
+    background-color: rgb(0, 124, 169);
     margin: 20px auto;
 }
 .content .form-group button:hover{
-    background-color: rgb(4, 54, 112);
+    background-color: rgb(0, 94, 123);
 }
 </style>
 

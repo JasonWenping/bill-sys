@@ -9,9 +9,10 @@
                 <input type="date" name="end" placeholder="账单开始时间">
             </div>
             <div class="form-group">
-                <input type="radio" name="alipay">支付宝
-                <input type="radio" name="unionpay" id="">银联
-                <input type="radio" name="icbc">工商银行
+                <label for="">查询范围：</label>
+                <input type="radio" name="alipay" value="alipay">支付宝
+                <input type="radio" name="unionpay" value="unionpay">银联
+                <input type="radio" name="icbc" value="icbc">工商银行
             </div>
         </div>
     </div>
@@ -28,11 +29,17 @@ export default {
 </script>
 
 <style scoped>
+*{
+    background-color: rgb(36, 36, 36);
+    color: #fff;
+}
 #searchPage {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    color: #292929;
     font-family: "Microsoft YaHei";
     color: rgb(56, 56, 56);
-    margin-left: 70px;
-    padding: 10px 0;
 }
 #searchPage h5::before {
     content: '\00BB';
@@ -49,9 +56,6 @@ export default {
     margin-top: 20px;
 }
 .form-data .form-group input[type=radio] {
-    height: 20px;
-    width: 20px;
-    background-color: rgb(0, 173, 196);
 }
 </style>
 
