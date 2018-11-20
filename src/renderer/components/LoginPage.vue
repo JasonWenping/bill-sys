@@ -6,6 +6,7 @@
         <input type="password" name="psw" id="psw" placeholder="enter your password" v-focus="true">
         <router-link to="/home">>></router-link>
     </div>
+    <router-link to='/'><p>忘记密码</p></router-link>
 </div>
 </template>
 
@@ -33,6 +34,8 @@ export default {
 }
 #loginPage {
     position: fixed;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
     color: #292929;
@@ -75,6 +78,12 @@ h3 {
 }
 .input-psw a:hover {
     color: #0385ff;
+}
+p {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
 }
 </style>
 

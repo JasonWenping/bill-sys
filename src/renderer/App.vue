@@ -1,9 +1,7 @@
 <template>
   <div id="app">
-    <left-bar></left-bar>
-    <div class="content-panel">
-      <router-view></router-view>
-    </div>
+    <left-bar>
+      <router-view></router-view></left-bar>
   </div>
 </template>
 
@@ -25,11 +23,8 @@
     margin: 0;
     padding: 0;
   }
-  /*
-  .content-panel {
-    margin-left: 80px;
-    padding-top: 10px;
+  body { font-family: 'Source Sans Pro', sans-serif;}
+  input:focus {
+      outline: none;
   }
-  */
-  body { font-family: 'Source Sans Pro', sans-serif; }
 </style>

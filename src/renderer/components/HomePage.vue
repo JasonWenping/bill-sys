@@ -18,7 +18,6 @@
 #wrapper{
     font-family: "Microsoft YaHei";
     color: rgb(56, 56, 56);
-    margin-left: 70px;
     padding: 10px 0;
 }
 </style>

@@ -1,31 +1,41 @@
 <template>
   <div>
-    <div class="title">Information</div>
+    <div class="title">系统信息</div>
     <div class="items">
-      <div class="item">
-        <div class="name">Path:</div>
-        <div class="value">{{ path }}</div>
-      </div>
-      <div class="item">
-        <div class="name">Route Name:</div>
-        <div class="value">{{ name }}</div>
-      </div>
-      <div class="item">
-        <div class="name">Vue.js:</div>
-        <div class="value">{{ vue }}</div>
-      </div>
-      <div class="item">
-        <div class="name">Electron:</div>
-        <div class="value">{{ electron }}</div>
-      </div>
-      <div class="item">
-        <div class="name">Node:</div>
-        <div class="value">{{ node }}</div>
-      </div>
-      <div class="item">
-        <div class="name">Platform:</div>
-        <div class="value">{{ platform }}</div>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>参数名</th>
+            <th>参数值</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Path</td>
+            <td>{{ path }}</td>
+          </tr>
+          <tr>
+            <td>Router Name</td>
+            <td>{{ name }}</td>
+          </tr>
+          <tr>
+            <td>Vue.js</td>
+            <td>{{ vue }}</td>
+          </tr>
+          <tr>
+            <td>Electron</td>
+            <td>{{ electron }}</td>
+          </tr>
+          <tr>
+            <td>Node</td>
+            <td>{{ node }}</td>
+          </tr>
+          <tr>
+            <td>Platform</td>
+            <td>{{ platform }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
@@ -69,5 +79,30 @@
   .item .value {
     color: #35495e;
     font-weight: bold;
+  }
+  table {
+    border-collapse: collapse;
+    line-height: 30px;
+    text-align: center;
+  }
+  table tr td,table tr th {
+    width: 200px;
+  }
+  table thead tr {
+    background-color: #6a6a6a;
+    line-height: 40px;
+    color: #ffffff;
+  }
+  table tbody tr:nth-child(even) {
+    background-color: #e6e6e6;
+  }
+  table tbody tr:hover {
+    background-color: #e6e6e6;
+  }
+  table tr td:nth-child(1) {
+    font-weight: bold;
+  }
+  table tr td:nth-child(2) {
+    width: 75%;
   }
 </style>

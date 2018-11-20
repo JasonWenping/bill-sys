@@ -37,6 +37,8 @@ export default {
 <style scoped>
 #initialPsw{
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -57,14 +59,15 @@ export default {
     width: 250px;
     height: 35px;
     border-radius: 100px;
-    background-color: #fff;
     border: none;
     margin: 10px 0;
     padding: 0 10px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgb(177, 0, 213);
 }
 .set-psw input[type=password]:focus {
-    border: 2px solid rgb(177, 0, 213);
-    outline: 0 !important;
+    border: 2px solid rgb(255, 247, 137);
 }
 .set-psw button:focus {
     outline: 0;
